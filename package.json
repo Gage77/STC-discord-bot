@@ -1,11 +1,22 @@
 {
-    "name": "STC bot",
-    "version": "1.0.0",
-    "description": "General use discord bot for Sooner Tabletop Club",
-    "main": "bot.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Hunter Black",
-    "license": "ISC"
+  "name": "stc-discord-bot",
+  "version": "1.0.0",
+  "description": "General use discord bot for the Sooner Tabletop Club",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gage77/STC-discord-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gage77/STC-discord-bot/issues"
+  },
+  "homepage": "https://github.com/Gage77/STC-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }
