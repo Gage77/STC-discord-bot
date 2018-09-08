@@ -1,0 +1,11 @@
+{
+    "name": "STC bot",
+    "version": "1.0.0",
+    "description": "General use discord bot for Sooner Tabletop Club",
+    "main": "bot.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Hunter Black",
+    "license": "ISC"
+}
