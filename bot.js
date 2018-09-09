@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const botconfig = require('./botconfig.json');
 
+const welcomeMessage = "test";
+
 client.on('ready', () => {
     console.log('Torgan Simtral has arrived at the library');
 });
@@ -17,7 +19,7 @@ client.on('message', (message) => {
 // New guild member listener
 client.on('guildMemberAdd', member => {
     // Send message to a designated channel
-    
+    member.sendMessage(welcomeMessage);
 });
 
 client.login(botconfig.token);
