@@ -18,6 +18,6 @@ client.on('message', (message) => {
 client.on('guildMemberAdd', member => {
     // Send message to a designated channel
     
-})
+});
 
 client.login(botconfig.token);
