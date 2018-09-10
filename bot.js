@@ -20,6 +20,8 @@ client.on('message', (message) => {
 client.on('guildMemberAdd', member => {
     // Send message to a designated channel
     member.sendMessage(welcomeMessage);
+    const wchannel = client.channels.find('name', welcome);
+    wchannel.send(`Hail, ${member}! Please read the Discord rules pinned in this channel. Also please read the topics of each channel before posting to said channel to be sure you remain on-topic.`);
 });
 
 client.login(botconfig.token);
