@@ -1,5 +1,6 @@
 # STC-discord-bot
-General use discord bot for the Sooner Tabletop Club
+General use discord bot for the Sooner Tabletop Club. Invite the bot by going [here](https://discordapp.com/oauth2/authorize?client_id=488088883901366282&scope=bot
+)
 
 ## What does this bot do?
 This bot serves to fulfill the following duties when it is active on the Sooner Tabletop Discord channel
