@@ -12,6 +12,16 @@ client.on('message', (message) => {
     if (message.content == '*ping') {
         message.channel.send(' pong');
     }
+    else if (message.content == '*ut') {
+        let totalSeconds = (client.uptime / 1000);
+        let hours = Math.floor(totalSeconds / 3600);
+        totalSeconds %= 3600;
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds %60;
+
+        let uptime = `Torgan has been up for ${hours} hours, ${minutes} minutes and ${seconds} seconds.`;
+        message.channel.send(uptime);
+    }
 });
 
 // New guild member listener
