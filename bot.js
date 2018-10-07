@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const botconfig = require('./botconfig.json');
+const meetings = require('./meetings.json');
 
 client.on('ready', () => {
     console.log('Torgan Simtral has arrived at the library');
@@ -12,6 +13,7 @@ client.on('message', (message) => {
     if (message.content == '*ping') {
         message.channel.send(' pong');
     }
+    // Print up time
     else if (message.content == '*ut') {
         let totalSeconds = (client.uptime / 1000);
         let hours = Math.floor(totalSeconds / 3600);
@@ -21,6 +23,22 @@ client.on('message', (message) => {
 
         let uptime = `Torgan has been up for ${hours} hours, ${minutes} minutes and ${seconds} seconds.`;
         message.channel.send(uptime);
+    }
+    // Shows meeting location and time
+    else if (message.content == '*meeting') {
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth();
+
+        let mmdd = dd + '/' + mm;
+
+        let meetingDays = meetings.saturdayMeetings;
+        for (let i = 0; i < meetingDays.length; i++) {
+            if (meetingDays[i].date >= mmdd) {
+                message.channel.send('This weeks meeting will be held on Saturday, ' + meetingDays[i].date + ' in ' + meetingDays[i].room);
+                break;
+            }
+        }
     }
 });
 
