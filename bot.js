@@ -29,12 +29,13 @@ client.on('message', (message) => {
         let today = new Date();
         let dd = today.getDate();
         let mm = today.getMonth();
+        let yyyy = today.getFullYear();
 
-        let mmdd = dd + '/' + mm;
+        let mmddyyyy = mm + '/' + dd + '/' + yyyy;
 
         let meetingDays = meetings.saturdayMeetings;
         for (let i = 0; i < meetingDays.length; i++) {
-            if (meetingDays[i].date >= mmdd) {
+            if (Date.parse(meetingDays[i].date + '/' + yyyy) >= Date.parse(mmddyyyy)) {
                 message.channel.send('This weeks meeting will be held on Saturday, ' + meetingDays[i].date + ' in ' + meetingDays[i].room);
                 break;
             }
