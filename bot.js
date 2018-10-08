@@ -3,14 +3,29 @@ const client = new Discord.Client();
 const botconfig = require('./botconfig.json');
 const meetings = require('./meetings.json');
 
+const commands = [
+    "(1) help - Display all commands that this bot has integrated",
+    "(2) ping - Expect response pong from bot to test whether it is online",
+    "(3) ut - Displays how long the bot has been up in hours/minutes/seconds",
+    "(4) meeting - Displays when and where the next general meeting will be held"
+];
+
 client.on('ready', () => {
     console.log('Torgan Simtral has arrived at the library');
 });
 
 // Messages
 client.on('message', (message) => {
+    // Show all commands command
+    if (message.content == '*help') {
+        let allCommands = "Here is a list of all commands currently available: \n";
+        for (let i = 0; i < commands.length; i++) {
+            allCommands += commands[i] + "\n";
+        }
+        message.channel.send(allCommands);
+    }
     // Ping test
-    if (message.content == '*ping') {
+    else if (message.content == '*ping') {
         message.channel.send(' pong');
     }
     // Print up time
