@@ -41,14 +41,17 @@ client.on('message', (message) => {
     }
     // Shows meeting location and time
     else if (message.content == '*meeting') {
-        let today = new Date();
-        let dd = today.getDate();
-        let mm = today.getMonth();
-        let yyyy = today.getFullYear();
+        var today = message.createdAt.toString();
+        console.log(today);
+        var dd = today.substring(8, 10);
+        var mm = today.substring(4, 7);
+        mm = monthNums[mm];
+        var yyyy = today.substring(11, 15);
 
-        let mmddyyyy = mm + '/' + dd + '/' + yyyy;
+        var mmddyyyy = mm + '/' + dd + '/' + yyyy;
+        console.log(mmddyyyy);
 
-        let meetingDays = meetings.saturdayMeetings;
+        var meetingDays = meetings.saturdayMeetings;
         for (let i = 0; i < meetingDays.length; i++) {
             if (Date.parse(meetingDays[i].date + '/' + yyyy) >= Date.parse(mmddyyyy)) {
                 message.channel.send('This weeks meeting will be held on Saturday, ' + meetingDays[i].date + ' in ' + meetingDays[i].room);
@@ -72,5 +75,20 @@ client.on('guildMemberAdd', member => {
     // Send message to a members DM
     member.sendMessage(`Hail, ${member}!` + welcomeMessage);
 });
+
+monthNums = {
+    "Jan": 01,
+    "Feb": 02,
+    "Mar": 03,
+    "Apr": 04,
+    "May": 05,
+    "Jun": 06,
+    "Jul": 07,
+    "Aug": 08,
+    "Sep": 09,
+    "Oct": 10,
+    "Nov": 11,
+    "Dec": 12
+};
 
 client.login(botconfig.token);
