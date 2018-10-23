@@ -10,8 +10,24 @@ const commands = [
     "(4) meeting - Displays when and where the next general meeting will be held"
 ];
 
+// Sends awake message every 24 hours
+function stayAwake () {
+    const botChannel = client.channels.find('name', bot-testing);
+    var now = new Date();
+    const delay = 24 * 60 * 60 * 1000 // 24 hours
+    var start = delay - (now.getMinutes() * 60 + now.getSeconds()) * 1000 + now.getMilliseconds();
+
+    setTimeout(function stillAwake() {
+        // use the message's channel (TextChannel) to send a new message
+        botChannel.send("Still awake");
+        setTimeout(stillAwake, delay);
+    }, start);
+}
+
 client.on('ready', () => {
     console.log('Torgan Simtral has arrived at the library');
+    // Call the stay awake function to keep bot from timing out
+    stayAwake();
 });
 
 // Messages
