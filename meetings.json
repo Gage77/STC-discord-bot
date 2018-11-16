@@ -1,12 +1,12 @@
 {
     "saturdayMeetings": [
-        {"date": "10/20", "room": "Headington"},
+        {"date": "10/20", "room": "Headington College, room D127"},
         {"date": "10/27", "room": "Union (Bartlett Room)"},
-        {"date": "11/03", "room": "Headington"},
+        {"date": "11/03", "room": "Headington College, room D127"},
         {"date": "11/10", "room": "Union (Bartlett Room)"},
         {"date": "11/17", "room": "Union (Bartlett Room)"},
-        {"date": "11/24", "room": "Headington"},
-        {"date": "12/01", "room": "Headington"},
-        {"date": "12/08", "room": "Headington"}
+        {"date": "11/24", "room": "Headington College, room D127"},
+        {"date": "12/01", "room": "Headington College, room D127"},
+        {"date": "12/08", "room": "Headington College, room D127"}
     ]
 }
