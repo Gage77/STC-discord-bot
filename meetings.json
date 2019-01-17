@@ -1,12 +1,20 @@
 {
     "saturdayMeetings": [
-        {"date": "10/20", "room": "Headington College, room D127"},
-        {"date": "10/27", "room": "Union (Bartlett Room)"},
-        {"date": "11/03", "room": "Headington College, room D127"},
-        {"date": "11/10", "room": "Union (Bartlett Room)"},
-        {"date": "11/17", "room": "Union (Bartlett Room)"},
-        {"date": "11/24", "room": "Headington College, room D127"},
-        {"date": "12/01", "room": "Headington College, room D127"},
-        {"date": "12/08", "room": "Headington College, room D127"}
+        {"date": "1/19", "room": "Headington College, room D127"},
+        {"date": "1/26", "room": "Headington College, room D127"},
+        {"date": "2/2", "room": "Headington College, room D127"},
+        {"date": "2/9", "room": "Headington College, room D127"},
+        {"date": "2/16", "room": "Headington College, room D127"},
+        {"date": "2/23", "room": "Headington College, room D127"},
+        {"date": "3/2", "room": "Headington College, room D127"},
+        {"date": "3/9", "room": "Headington College, room D127"},
+        {"date": "3/16", "room": "Headington College, room D127"},
+        {"date": "3/23", "room": "Headington College, room D127"},
+        {"date": "3/30", "room": "Headington College, room D127"},
+        {"date": "4/6", "room": "Headington College, room D127"},
+        {"date": "4/13", "room": "Headington College, room D127"},
+        {"date": "4/20", "room": "Headington College, room D127"},
+        {"date": "4/27", "room": "Headington College, room D127"},
+        {"date": "5/4", "room": "Headington College, room D127"}
     ]
 }
